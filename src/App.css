@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+/*=============================================
+=          Custom properties                  =
+=============================================*/
+
+:root{
+    --font: 'Montserrat', sans-serif;
+    --regular: 500;
+    --bold: 700;
+    --big-fontsize: 10rem;
+    --title-fontsize: 4.4rem;
+    --subtitle-fontsize: 4.2rem;
+    --smalltitle-fontsize: 2.4rem;
+    --paragraph-fontsize: 1.6rem;
+    --button-fontsize:1.2rem;
+    --footer-fontsize:1rem;
+    --text-color: hsl(0,2%,22%);
+    --border-color: hsl(0,2%,22%);
+    --padding: 1.6rem;
+    --padding-small:0.8rem;
+    --bg-color: hsl(0,0%,100%);
+    --buttonbg-color: transparent;
+    --button-border: 1px solid;
+    --button-margin: 1.6rem;
+    --button-padding: 0.8rem;   
+    --lateral-padding: 0 .8rem;
+    --lateral-paddingdesktop: 8rem;
+    --secondary-color: hsl(357,100%,80%);
+    --margin-xlarge: 8rem;
+    --margin-large: 6.4rem;
+    --margin-medium: 3.2rem;
+    --margin-small: 0.8rem;
+    --footer-bgcolor: hsl(285, 78%, 75%);
+    --footer-height: 4rem;
+    --footer-fontsize: 0.8rem;
+    --project-fontsize: 5.6rem;
+    --projecthover-color: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 600px) {
+    :root{
+        --project-fontsize: 8rem;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (min-width: 800px){
+    
+    :root{
+        --lateral-padding: 0 3.2rem;
+        --button-fontsize: 2.4rem;
+        --paragraph-fontsize: 2.4rem;
+        --big-fontsize: 16rem;
+        --margin-small: 2.4rem;
+        --footer-fontsize: 1.6rem;
+        --footer-height: 5.6rem;
+        --project-fontsize: 12rem
+    }
+    
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+/*=============================================
+=            General                          =
+=============================================*/
+*{
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+html, body{
+    width: 100%;
+    font-size: 62.5%;
+}
+body{
+    font-family: var(--font);
+    background-color: var(--bg-color);
+    padding-top: var(--margin-medium);
+    min-height: 93.5vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root{
+    height: 100%;
 }
+
+h1, h2, h3, h4, p{
+    margin: 0;
+}
+
+
+.button{
+    font-family: var(--font);
+    background-color: transparent;
+    border: var(--button-border);
+    border-radius: 3rem;
+    border-color: var(--text-color);
+    padding: var(--button-padding);
+    color: var(--text-color);
+    font-size: var(--button-fontsize);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+.button:hover{
+    background-color: var(--secondary-color);
+}
+.title{
+    color: var(--text-color);
+    font-family: var(--font);
+    font-size: var(--title-fontsize);
+    text-transform: uppercase;
+    margin-top: var(--margin-medium);
+    text-align: center;
+}
+
+

@@ -1,0 +1,11 @@
+@media (max-width: 600px){
+    
+    .container{
+        height: 80%;
+        overflow: scroll;
+    }
+    
+
+}
+
+
